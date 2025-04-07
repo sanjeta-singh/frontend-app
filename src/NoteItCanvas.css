@@ -1,0 +1,192 @@
+/* Body background */
+body {
+  background-color: #d8a6ff;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main Box with Border */
+.main-box {
+  border: 2px solid #9163cb;
+  border-radius: 20px;
+  padding: 25px;
+  width: 95%;
+  max-width: 1200px;
+  height: 90vh;
+  margin: 0 auto;
+  background-color: #d8a6ff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(145, 99, 203, 0.4);
+}
+
+/* Grid layout for the top section */
+.top-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+/* Style for each column */
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  padding-right: 15px;
+  border-right: 1px solid rgba(145, 99, 203, 0.6);
+}
+
+/* Remove the border from the last column */
+.column:last-child {
+  border-right: none;
+}
+
+/* Style for the button row (Brush and Eraser buttons) */
+.button-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Style for shape rows */
+.shape-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* Style for the horizontal line between rows */
+.row-divider {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid rgba(145, 99, 203, 0.6);
+  margin: 12px 0;
+}
+
+/* Style for regular buttons */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #9163cb;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+button:hover {
+  background-color: #c895f0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* ORIGINAL CANVAS STYLES */
+.canvas-container {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.drawing-canvas {
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #fff;
+  display: block;
+  margin: 0;
+  padding: 0;
+  cursor: crosshair;
+}
+
+/* ORIGINAL TEXTAREA STYLES */
+.note-input {
+  width: 100%;
+  height: 30px;
+  margin-top: 4px;
+  margin-bottom: 0.1px;
+  padding: 10px;
+  border: 1px solid #9163cb;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+/* ENHANCED BUTTON STYLES */
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  gap: 20px;
+}
+
+.btn-group button {
+  padding: 16px 32px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: 1;
+  min-width: 200px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  /* GRADIENT EFFECT FOR BOTH BUTTONS (NO ANIMATION) */
+  background: rgba(145, 99, 203, 0.7);
+  box-shadow: 0 6px 20px rgba(145, 99, 203, 0.7);
+  border: none;
+}
+
+/* Hover effects */
+.btn-group button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(145, 99, 203, 0.9);
+  filter: brightness(1.1);
+}
+
+/* Active effects */
+.btn-group button:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 15px rgba(145, 99, 203, 0.6);
+}
+
+/* Active tool indicator */
+button.active-tool {
+  background-color: #7a4fb0;
+  font-weight: bold;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.5);
+}
+
+/* ORIGINAL COLOR PICKER STYLES */
+input[type="color"],
+input[type="range"] {
+  cursor: pointer;
+  border: 1px solid #9163cb;
+  border-radius: 5px;
+}
+
+input[type="color"]:hover,
+input[type="range"]:hover {
+  border-color: #7a4fb0;
+}

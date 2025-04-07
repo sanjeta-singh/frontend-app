@@ -1,0 +1,143 @@
+/* ONLY BACKGROUND CHANGED - EVERYTHING ELSE REMAINS THE SAME */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: rgba(232, 180, 243, 0.829); 
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* EVERYTHING BELOW THIS IS EXACTLY AS YOU HAD IT BEFORE */
+.container {
+  width: 94%;
+  max-width: 1500px;
+  padding: 50px 40px;
+  background: rgba(255, 255, 255, 0.829);
+  backdrop-filter: blur(12px);
+  border-radius: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 650px;
+  border: 1px solid rgba(241, 10, 10, 0.1);
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 50px;
+  width: fit-content;
+  padding: 10px 20px;
+  margin: 0 auto 50px auto;
+ 
+
+  background-color: rgba(180, 157, 210, 0.829); /* Lavender */
+  border-radius: 40px;        /* Curvy edges */
+  
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  width: 100%;
+  justify-items: center;
+  margin: 40px 0 20px 0;
+}
+
+.card {
+  background: rgba(180, 157, 210, 0.829);
+  backdrop-filter: blur(8px);
+  border-radius: 5px; 
+  width: 100%;
+  max-width: 320px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  padding: 20px;
+  margin: 0 25px;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255,255,255,0.1),
+    rgba(255,255,255,0)
+  );
+  transform: rotate(30deg);
+  z-index: 0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.card-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.card-content {
+  padding: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 10px 0;
+}
+
+.card-subtitle {
+  font-size: 1rem;
+  color: #610378;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 20px;
+    height: auto;
+  }
+  
+  .title {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .card {
+    max-width: 100%;
+    margin: 0 0 20px 0;
+  }
+}

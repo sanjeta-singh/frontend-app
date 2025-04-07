@@ -1,0 +1,180 @@
+.fundraiser-container {
+    background: linear-gradient(135deg, #e0b0ff, #d8aef8, #ffb6e6);
+
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px 50px 20px; /* Increased top padding to make room for title */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.fundraiser-title {
+  color: #6b3ea5;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 20px; /* Add margin to push down from the very top */
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding-top: 20px;
+}
+
+.fundraiser-subtitle {
+  color: #6b3ea5;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+/* Donation Cards */
+.donation-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+/* Individual Donation Card */
+.donation-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 300px;
+  max-width: 90%;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.donation-card:hover {
+  transform: translateY(-10px);
+}
+
+.donation-card h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #6b3ea5;
+}
+
+.donation-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.donation-card strong {
+  font-weight: bold;
+  color: #8a63f2;
+}
+
+/* Form Styling */
+.donor-form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  width: 90%;
+  margin: 30px auto;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.donor-form h2 {
+  color: #6b3ea5;
+  margin-bottom: 10px;
+}
+
+.donor-form input {
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  width: 100%;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.donor-form input:focus {
+  border-color: #8a63f2;
+  box-shadow: 0 0 0 3px rgba(138, 99, 242, 0.2);
+  outline: none;
+}
+
+.donor-form button {
+  background: #6b3ea5;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  box-shadow: 0 4px 15px rgba(107, 62, 165, 0.3);
+}
+
+.donor-form button:hover {
+  background: #5a2d8a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(107, 62, 165, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .fundraiser-title {
+    font-size: 2rem;
+    margin-top: 30px; /* Add more margin on mobile */
+  }
+  
+  .fundraiser-subtitle {
+    font-size: 1rem;
+  }
+  
+  .donation-cards {
+    gap: 20px;
+  }
+  
+  .donation-card {
+    padding: 25px;
+  }
+  
+  .donor-form {
+    padding: 30px;
+  }
+}
+
+/* Added for proper page layout */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 20px; /* Add padding to push content down */
+}
+
+/* Add this specific styling for the header/title section */
+.header-section {
+  padding-top: 40px;
+  width: 100%;
+}
