@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styles from './Dashboard.module.css';
+import { useNavigate } from "react-router-dom";
 
 const hospitals = {
   'City Hospital': ['Dr. Alice Brown', 'Dr. Emily Davis', 'Dr. John Smith'],
@@ -11,6 +12,7 @@ const hospitals = {
 const Dashboard = () => {
   const [patient, setPatient] = useState({ name: '', age: '', hospital: '', doctor: '' });
   const [patients, setPatients] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchPatients();
@@ -131,6 +133,16 @@ const Dashboard = () => {
               </tbody>
             </table>
           </div>
+        </div>
+
+        {/* Centered Canvas Button */}
+        <div className={styles.canvasButtonContainer}>
+          <button 
+            onClick={() => navigate("/coloring")} 
+            className={styles.canvasButton}
+          >
+            Canvas
+          </button>
         </div>
       </div>
     </div>
