@@ -11,7 +11,9 @@ function HospitalSelection() {
   const navigate = useNavigate();
 
   const handleCardClick = (hospitalId) => {
-    navigate(`/doctors/${hospitalId}`); // Navigate to the doctors page with hospital ID
+    navigate(`/doctors/${hospitalId}`, {
+      state: { fromHospitals: true } // Add navigation state
+    });
   };
 
   return (
@@ -22,7 +24,7 @@ function HospitalSelection() {
           <div
             key={hospital.id}
             className="card"
-            onClick={() => handleCardClick(hospital.id)} // Add click handler
+            onClick={() => handleCardClick(hospital.id)}
           >
             <img src={hospital.image} alt={hospital.name} className="card-img" />
             <h3 className="card-title">{hospital.name}</h3>
