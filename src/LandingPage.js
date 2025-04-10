@@ -45,11 +45,6 @@ const LandingPage = () => {
     navigate("/Gallery"); 
   };
 
-  const handleDashboardClick = (e) => {
-    e.preventDefault(); 
-    navigate("/Dashboard"); 
-  };
-
   return (
     <div className="landing-page">
       <nav className="navbar">
@@ -58,7 +53,6 @@ const LandingPage = () => {
           <li><a href="#home">Home</a></li>
           <li><a href="#Gallery" onClick={handleGalleryClick}>Gallery</a></li>
           <li><a href="#Fundraiser" onClick={handleFundraiserClick}>Fundraiser</a></li>
-          <li><a href="#Dashboard" onClick={handleDashboardClick}>Dashboard</a></li>
         </ul>
       </nav>
 
